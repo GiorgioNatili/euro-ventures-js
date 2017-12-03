@@ -47,6 +47,9 @@ exports = module.exports = function (app) {
     app.put('/api/planets/:id', routes.api.planet.update);
     app.delete('/api/planets/:id', routes.api.planet.remove);
 
+    app.get('/api/teammembers', routes.api.teammember.list);
+    app.get('/api/teammembers/:id', routes.api.teammember.get);
+
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 };
