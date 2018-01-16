@@ -9,7 +9,13 @@ import { ManinMenuComponent } from './manin-menu/manin-menu.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { OfficeLocationComponent } from './components/office-location/office-location.component';
 import { RouterModule } from '@angular/router';
-import { routes } from './routes';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HomePageModule } from './home-page/home-page.module';
+import { PortfolioPageModule } from './portfolio-page/portfolio-page.module';
+import { TeamPageModule } from './team-page/team-page.module';
+import { WhoWeArePageModule } from './who-we-are-page/who-we-are-page.module';
+import { PartnersPageModule } from './partners-page/partners-page.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +25,17 @@ import { routes } from './routes';
     LogoComponent,
     ManinMenuComponent,
     CallToActionComponent,
-    OfficeLocationComponent
+    OfficeLocationComponent,
+    PageNotFoundComponent
   ],
   imports: [
+    AppRoutingModule,
+    HomePageModule,
+    PortfolioPageModule,
+    TeamPageModule,
+    WhoWeArePageModule,
+    PartnersPageModule,
     BrowserModule,
-    RouterModule.forRoot(routes, {useHash: false}) // <-- installs Router routes, components and services
   ],
   providers: [],
   bootstrap: [AppComponent]
